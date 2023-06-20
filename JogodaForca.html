@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca</title>
+</head>
+<body>
+    <script>
+  const words = ["programação", "javascript", "computador"]; // Lista de palavras
+
+  function getRandomWord() {
+  const randomIndex = Math.floor(Math.random() * words.length); // Gera um índice aleatório
+  return words[randomIndex]; // Retorna uma palavra aleatória da lista
+  }
+
+  function playHangman() {
+  const word = getRandomWord().toLowerCase(); // Obtém uma palavra aleatória em letras minúsculas
+  const guessedLetters = []; // Array para armazenar as letras adivinhadas
+  let remainingAttempts = 6; // Número de tentativas restantes
+
+  while (remainingAttempts > 0) { // Enquanto ainda houver tentativas restantes
+    console.log("\nPalavra:", getMaskedWord(word, guessedLetters)); // Exibe a palavra mascarada com as letras adivinhadas
+    console.log("Tentativas restantes:", remainingAttempts); // Exibe o número de tentativas restantes
+    console.log("Letras já usadas:", guessedLetters.join(", ")); // Exibe as letras já adivinhadas separadas por vírgula
+
+    const guessedLetter = prompt("Digite uma letra:").toLowerCase(); // Solicita ao usuário que digite uma letra
+
+    if (!isLetter(guessedLetter)) { // Verifica se a entrada é uma letra válida
+      console.log("Por favor, digite uma letra válida.");
+      continue; // Volta ao início do loop
+    }
+
+    if (guessedLetters.includes(guessedLetter)) { // Verifica se a letra já foi adivinhada anteriormente
+      console.log("Você já tentou essa letra. Tente outra.");
+      continue; // Volta ao início do loop
+    }
+
+    guessedLetters.push(guessedLetter); // Adiciona a letra adivinhada ao array de letras adivinhadas
+
+    if (word.includes(guessedLetter)) { // Verifica se a letra adivinhada está presente na palavra
+      console.log("Letra correta!");
+    } else {
+      console.log("Letra incorreta!");
+      remainingAttempts--; // Diminui o número de tentativas restantes
+    }
+
+    if (getMaskedWord(word, guessedLetters) === word) { // Verifica se todas as letras foram adivinhadas corretamente
+      console.log("\nParabéns! Você acertou a palavra:", word);
+      return; // Sai da função
+    }
+  }
+
+  console.log("\nSuas tentativas acabaram. A palavra era:", word); // Exibe a palavra correta após o término das tentativas
+}
+
+function getMaskedWord(word, guessedLetters) {
+  return word
+    .split("")
+    .map(letter => (guessedLetters.includes(letter) ? letter : "")) // Substitui as letras não adivinhadas por ""
+    .join(" "); // Junta as letras em uma string separadas por espaço
+}
+
+function isLetter(str) {
+  return str.length === 1 && str.match(/[a-z]/i); // Verifica se a string é uma letra do alfabeto
+}
+
+playHangman(); // Inicia o jogo da forca
+    </script>
+</body>
+</html>
