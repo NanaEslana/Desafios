@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrama</title>
+</head>
+<body>
+    <script>
+    const palavra1 = prompt("Digite a primeira palavra:")
+    const palavra2 = prompt("Digite a segunda palavra:")
+
+    function anagrama(palavra1){
+    return  palavra1.split('').sort().join('')
+    }
+
+    function anagrama1(palavra2){
+    return palavra2.split('').sort().join('')
+    }
+ 
+ 
+ if (anagrama(palavra1) === anagrama1(palavra2)){
+    console.log(`A palavra ${palavra1} e ${palavra2} e um anagrama`)
+   
+ }else{
+    console.log(`A palavra ${palavra1} e ${palavra2} não é uma palavra anagrama.`)
+ }
+    </script>
+</body>
+</html>
