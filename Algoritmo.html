@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo</title>
+</head>
+<body>
+    <script>
+        function selectionSort(arr: Array<number>) {
+        return arr.sort();
+        }
+     function selectionReverse(arr: Array<number>) {
+      return arr.sort().reverse();
+      }
+
+(() => {
+const numbers = [5, 3, 8, 1, 2, 7];
+console.log("Antes da ordenação:", numbers);
+console.log("Ordenação crescente:", selectionSort(numbers));
+console.log("Ordenação decrecente:", selectionReverse(numbers));
+})()
+
+    </script>
+</body>
+</html>
