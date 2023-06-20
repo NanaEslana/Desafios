@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+
+   /*Cria uma calculadora simples em JavaScript. O programa deve 
+   ser capaz de realizar operações básicas, como adição, subtração,
+   multiplicação e divisão. Ele pode criar uma interface de usuário simples usando a função prompt().*/
+   const num1 = parseFloat(prompt("Digite o primeiro número:"));
+   const num2 = parseFloat(prompt("Digite o segundo número:"));
+   const operator = prompt("Digite o operador (+, -, *, /):");
+
+let result;
+
+switch (operator) {
+    case "+":
+        result = num1 + num2;
+        console.log(`${num1} + ${num2} = ${result}`);
+        break;
+    case "-":
+        result = num1 - num2;
+        console.log(`${num1} - ${num2} = ${result}`);
+        break;
+    case "*":
+        result = num1 * num2;
+        console.log(`${num1} * ${num2} = ${result}`);
+        break;
+    case "/":
+        result = num1 / num2;
+        console.log(`${num1} / ${num2} = ${result}`);
+        break;
+    default:
+        console.log("Operador inválido");
+}
+    </script>
+</body>
+</html>
