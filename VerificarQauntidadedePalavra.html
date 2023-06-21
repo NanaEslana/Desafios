@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar Quantidade de Palavras na Frase</title>
+</head>
+<body>
+    <script>
+        /*Escreva uma função que conte o número de palavras em uma frase.
+        A função deve receber uma frase como entrada e retornar o número 
+        de palavras contidas na frase.*/ 
+
+        const frase = prompt('Digite uma frase:') //armazenar a frase
+        const qtdPalavras = frase.trim().split(/\s+/).length //separa as palavras e verificar a quantidade
+
+console.log(frase)
+console.log(`A quantidade de palavras é: ${qtdPalavras}`)
+
+    </script>
+</body>
+</html>
