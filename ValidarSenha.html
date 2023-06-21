@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar Senha </title>
+</head>
+<body>
+    <script>
+       /* Crie uma função que valide senhas com base em determinados critérios. 
+        As senhas devem ter pelo menos 8 caracteres, conter pelo menos uma letra 
+        maiúscula, uma letra minúscula e um número*/
+  
+    function validatePassword(password: string) {
+    const digito = password.match(/[\d+]/) //Verificar se contém um numero
+    const letrasMa = password.match(/[\A-Z]/) //Verificar se tem palavra Maiuscula
+    const letrasMin = password.match(/[a-z]+/) //Verificar se tem letra minúscula
+    const numeros = password.length >= 8 //Digita senha maior ou igual 8
+  
+    return digito && letrasMa && letrasMin && numeros ; 
+    }
+
+     const inputPassword = prompt("Digite a senha:"); // Solicita ao usuário que digite a senha
+     const isValid = validatePassword(inputPassword!); // Chama a função validatePassword com a senha fornecida e armazena o resultado em uma variável
+
+     if (isValid!) {
+         console.log("Senha válida.");
+        } else {
+          console.log("Senha inválida. Certifique-se de que ela tenha pelo menos 8 caracteres, uma letra maiúscula, uma letra minúscula e um número.");
+}
+
+
+    </script>
+</body>
+</html>
