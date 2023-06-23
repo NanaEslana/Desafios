@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inverte as Palavras</title>
+</head>
+<body>
+    <script>
+ /*Inverter uma string
+Crie uma função que receba uma string como parâmetro e retorne a mesma 
+string invertida. Por exemplo, se a string fornecida for "programação",
+ a função deve retornar "ãçãçamargorp".*/
+
+function reverseString(str: string) {
+    return str.split('').reverse().join('')
+}
+
+const inputString = prompt("Digite uma string:"); // Solicita ao usuário que digite uma string
+const reversedString = reverseString(inputString!); // Chama a função reverseString com a string fornecida e armazena o resultado em uma variável
+
+console.log(`String original: ${inputString}`);
+console.log(`String invertida: ${reversedString}`);
+
+    </script>
+</body>
+</html>
