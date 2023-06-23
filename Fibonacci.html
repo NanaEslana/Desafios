@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci</title>
+</head>
+<body>
+    <script>
+
+    const numero = prompt('Digite o numero:')
+    n1 = 0;
+    n2 = 1;
+
+    console.log(n1 + n2)
+    let cont = 0
+    for (cont = 0; cont < numero; cont ++){
+         n3 = n1 + n2
+            console.log(n3)
+            n1 = n2
+            n2 = n3
+    }
+console.log(`A sequencia de fibonacci do numero ${numero} é:`)
+console.log(cont)
+
+/*Escreva um programa que gere a sequência de Fibonacci. 
+A sequência começa com 0 e 1, e cada número subsequente 
+é a soma dos dois números anteriores. Crie uma função que gere a sequência de 
+Fibonacci até um determinado limite especificado pelo usuário.*/
+    </script>
+</body>
+</html>
