@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificar o maior numero digitado.</title>
+</head>
+<body>
+    <script>
+    function findMaxValue(arr: Array<number>): number {
+         let cont = arr[0]; //Posição da Array
+    
+            for (var i = 1; i < arr.length; i ++){
+                 if(arr[i] > cont){
+                      cont = arr[i]
+                 }
+            
+             }
+     return cont;         
+}
+
+const inputArray = prompt("Digite um array de números (separe por vírgulas):")!; // Solicita ao usuário que digite um array de números
+const numbers = inputArray.split(",").map(Number); // Converte a string em um array de números
+
+const maxValue = findMaxValue(numbers); // Chama a função findMaxValue com o array fornecido e armazena o resultado em uma variável
+
+console.log(`Array: [${numbers.join(", ")}]`); // Exibe o array original no console
+console.log(`Maior valor: ${maxValue}`); // Exibe o maior valor encontrado no console
+
+
+
+/*Encontrar o maior valor em um array
+Crie uma função que receba um array de números como 
+parâmetro e retorne o maior valor presente no array.*/
+
+
+
+
+    </script>
+</body>
+</html>
