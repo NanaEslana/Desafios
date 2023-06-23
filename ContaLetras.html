@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt- BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContaLetras</title>
+</head>
+<body>
+    <script>
+    function countOccurrences(str: string, char: string) {
+     let count = 0;
+         for (var i = 0; i < str.length ;i ++){
+             if(str[i] === char){
+                count ++
+             }
+         }
+     return count;
+}
+
+const inputString = prompt("Digite uma string:")!; // Solicita ao usuário que digite uma string
+const inputChar = prompt("Digite um caractere:")!; // Solicita ao usuário que digite um caractere
+const occurrences = countOccurrences(inputString, inputChar); // Chama a função countOccurrences com a string e o caractere fornecidos e armazena o resultado em uma variável
+
+alert(`String: ${inputString}`);
+alert(`Caractere: ${inputChar}`);
+alert(`Número de ocorrências: ${occurrences}`);
+
+
+/*Contar ocorrências de um caractere
+Crie uma função que receba uma string e um caractere como parâmetros e 
+retorne o número de ocorrências desse caractere na string*/
+
+
+
+    </script>
+</body>
+</html>
