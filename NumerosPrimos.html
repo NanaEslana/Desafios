@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt- BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numeros Primos</title>
+</head>
+<body>
+    <script>
+    function isPrime(number: number) {
+        const num = Math.floor(number) //Arredondar para baixo
+        if(num === 1 ){
+         return false
+         }
+     for( var i = 2; i <= Math.sqrt(num); i++ ){ 
+        if(num %  i === 0){
+            return false
+        }
+    }
+    return true
+}
+const inputNumber = +prompt("Digite um número:")!; // Solicita ao usuário que digite um número
+const isNumberPrime = isPrime(inputNumber); // Chama a função isPrime com o número fornecido e armazena o resultado em uma variável
+
+if (isNumberPrime) {
+  console.log(`${inputNumber} é um número primo.`);
+} else {
+  console.log(`${inputNumber} não é um número primo.`);
+}
+/*Verificar se um número é primo
+Crie uma função que receba um número como parâmetro e 
+verifique se ele é um número primo. A função deve retornar 
+verdadeiro se o número for primo e falso caso contrário.*/
+
+    </script>
+</body>
+</html>
