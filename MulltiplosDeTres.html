@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplos de Tres</title>
+</head>
+<body>
+    <script>
+    for (let n = 1; n <= 100; n++){
+        if(n % 3 === 0 && n % 5 === 0){
+             console.log('FizzBuzz')
+        } if( n % 3 === 0){
+             console.log('Fizz')
+        } if ( n % 5 === 0){
+             console.log('Buzz')
+        }else{
+            console.log(`${n}`)
+    }
+}
+
+/*Desafio de FizzBuzz: Peça ao estudante para escrever um programa que percorra
+ os números de 1 a 100. Para múltiplos de três, o programa deve imprimir "Fizz" 
+ em vez do número. Para múltiplos de cinco,deve imprimir "Buzz". Para números 
+ que são múltiplos de três e cinco, o programa deve imprimir "FizzBuzz".*/
+
+    </script>
+</body>
+</html>
