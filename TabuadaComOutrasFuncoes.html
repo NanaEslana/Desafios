@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabuada</title>
+    
 </head>
-
 <body>
-    <button onclick="Multiplicar()">Criar tabuada.</button> <br>
-    <button onclick="Limpatabuada()">Limpar!</button> <br>
-    <div id="resultado"></div><br>
+    <button onclick="Multiplicar()">Multiplicação</button> 
+    <button onclick="Adição()">  Adição</button>
+    <button onclick="Subtração()"> Subtração</button>
+    <button onclick="Divisão()">  Divisão</button>
+    <button onclick="Limpatabuada()">Limpar!</button> 
+    <div id="multiplicacao"></div><br>
+    <div id="adicao"></div><br>
+    <div id="subtracao"></div><br>
+    <div id="divisao"></div><br>
+
     <script>
         function Multiplicar(){//função da tabuada.
             let numero = parseInt(prompt('Digite um numero;'));
 
             for(var i = 1; i <= 10; i ++){
-                 document.getElementById('resultado').innerHTML += `${numero}  x ${i} = ${numero * i} <br>`
+                 document.getElementById('multiplicacao').innerHTML += `${numero}  x ${i} = ${numero * i} <br>`
             }
            
-            document.getElementById('resultado').innerHTML += '<hr>'
+            document.getElementById('multiplicacao').innerHTML += '<hr>'
+        }
+        function Adição(){
+            let numero = parseInt(prompt('Digite um numero;'));
+
+            for(var i = 1; i <= 10; i ++){
+                 document.getElementById('adicao').innerHTML += `${numero}  + ${i} = ${numero + i} <br>`
+            }
+            document.getElementById('adicao').innerHTML += '<hr>'
+            
+        }
+         function Subtração(){
+            let numero = parseInt(prompt('Digite um numero;'));
+
+            for(var i = 1; i <= 10; i ++){
+                 document.getElementById('subtracao').innerHTML += `${numero}  - ${i} = ${numero - i} <br>`
+            }
+            document.getElementById('subtracao').innerHTML += '<hr>'
+            
+        }
+         function Divisão(){
+            let numero = parseInt(prompt('Digite um numero;'));
+
+            for(var i = 1; i <= 10; i ++){
+                 document.getElementById('divisao').innerHTML += `${numero}  / ${i} = ${numero / i} <br>`
+            }
+            document.getElementById('divisao').innerHTML += '<hr>'
+            
         }
         
         function Limpatabuada(){
-            document.getElementById('resultado').innerHTML = ''
+            document.getElementById('multiplicacao').innerHTML = ''
+            document.getElementById('adicao').innerHTML = ''
+            document.getElementById('subtracao').innerHTML = ''
+            document.getElementById('divisao').innerHTML = ''
         }
 
     </script>
