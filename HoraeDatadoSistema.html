@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data e Hora do Sistema</title>
+</head>
+<body>
+    <script>
+        let dias =['Domingo', 'Segunda', 'Terca','Quarta','Quinta','Sexta','Sabado'];
+
+let local = new Date() // Ver data no sistema.
+let diaSem = local.getDay() //Retorna o dia da semana.
+let Hora = local.getHours() //Retorna horario.
+let minuto = local.getMinutes() //Retorna os minutos
+
+console.log(`Bem vindo hoje é  ${ dias[diaSem]} e são exatamente ${Hora} horas e ${minuto} minutos.`)
+    </script>
+</body>
+</html>
